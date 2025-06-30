@@ -3,17 +3,23 @@ import express, { json, urlencoded } from "express";
 import "express-async-errors";
 import cors from "cors";
 
+// Get env variables
 dotenv.config();
+
+// Establish database connection
 
 // import database from "./app/database/index.js";
 // import routes from "./app/routes/index.js"; // Import API routes
 
+// Establish database connection
 // (async () => {
 //     await database();
 // })();
 
+// Create express instance
 const app = express();
 
+// Define cors origin
 const corsOptions = {
     origin: "*",
     optionsSuccessStatus: 200,
