@@ -9,7 +9,7 @@ dotenv.config();
 // Establish database connection
 
 import database from "./app/database/index.js";
-// import routes from "./app/routes/index.js"; // Import API routes
+import routes from "./app/routes/index.js";
 
 // Establish database connection
 (async () => {
@@ -31,7 +31,7 @@ app.use(json());
 app.use(urlencoded({ extended: true }));
 
 // Inject API Routes
-// app.use("/api", routes);
+app.use("/api", routes);
 
 app.get("/", (request, response) => {
     response.json({ message: "Welcome to ToDo-Simple NodeJS API." });
