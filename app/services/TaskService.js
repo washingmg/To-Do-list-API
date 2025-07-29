@@ -79,11 +79,7 @@ class TaskService {
 
         const attributes = Object.keys(Task.getAttributes);
         const taskQuantity = await Task.count();
-        const sortPaginateOptions = OrderPages.sortPaginate(
-            query,
-            attributes,
-            taskQuantity
-        );
+        const sortPaginateOptions = OrderPages(query, attributes, taskQuantity);
 
         const tasks = await Task.findAndCountAll({
             where: whre,

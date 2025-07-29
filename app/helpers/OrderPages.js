@@ -1,4 +1,4 @@
-function OrderPages(query, attributes, dataCount) {
+export default function OrderPages(query, attributes, dataCount) {
     let paranoid = true;
     let whre = {};
 
@@ -28,7 +28,3 @@ function OrderPages(query, attributes, dataCount) {
         paranoid: paranoid,
     };
 }
-
-export default {
-    OrderPages,
-};
